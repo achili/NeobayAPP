@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>neoBay</title>
+</head>
+<body>
+  <form action="http://121.15.180.66:801/netpayment/BaseHttp.dll?MB_EUserPay" method="post">
+    <input type="hidden" name="jsonRequestData" value='
+
+  {
+  "version": "1.0",
+  "charset": "UTF-8",
+  "sign": "1719c779feac818ef3fff45dd3bc9c078034f62a43b64962db4bf7d92b1188ef",
+  "signType": "SHA-256",
+  "reqData": {
+    "dateTime": "20190508104612",
+    "date": "20190508",
+    "orderNo": "9999000001",
+    "amount": "0.01",
+    "expireTimeSpan": "30",
+    "payNoticeUrl": "http://www.merchant.com/path/WAPProcResult.dll",
+    "payNoticePara": "aaa",
+    "clientIP": "99.6.150.83",
+    "cardType": "",
+    "merchantSerialNo": "20190507150523",
+    "agrNo": "2016051114280688",
+    "branchNo": "0021",
+    "merchantNo": "000413",
+    "mobile": "13888888888",
+    "userID": "0000000001",
+    "lon": "50.949506",
+    "lat": "30.949505",
+    "riskLevel": "3",
+    "signNoticeUrl": "http://www.baidu.com/notice.aspx?aa=11&bb=22",
+    "signNoticePara": "bb",
+    "returnUrl": "http://www.baidu.com/return.aspx?aa=11&bb=22",
+    "extendInfo": "",
+    "extendInfoEncrypType": "RC4"
+  }
+}
+
+  ' />
+    <input type="hidden" name="charset" value='UTF-8' />
+    <input type="submit">
+  </form>
+</body>
+</html>
+

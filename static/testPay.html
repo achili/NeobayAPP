@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>neoBay</title>
+</head>
+<body>
+  <form action="http://121.15.180.66:801/netpayment/BaseHttp.dll?MB_EUserPay" method="post" id="alipaysubmit" name="alipaysubmit">
+    <input type="hidden" name="jsonRequestData" id="inputParams" />
+    <input type="hidden" name="charset" value='UTF-8' />
+  </form>
+</body>
+</html>
+<script>
+  window.addEventListener('message', function (event) {
+    document.getElementById('inputParams').value = event.data;
+    document.forms['alipaysubmit'].submit();
+  })
+</script>
